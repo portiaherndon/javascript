@@ -1,8 +1,13 @@
 var add = $("add");
 //var delete = $("delete");
 
-function addImage() {
-	var img = document.createElement("img");
-	this.src = document.getElementById("pic");
-	document.body.appendChild(img);	
+window.onload = function addImage() {
+	var url=document.getElementById('pic').value;
+	var img=document.createElement("img");
+	var div=document.createElement('planning'); 
+	img.src = url;
+	
+	div.appendChild(img);
+	document.getElementById('planning').appendChild(div);
+		
 }
