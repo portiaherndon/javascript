@@ -6,7 +6,15 @@ function addImage() {
 	var img=document.createElement("img"); 
 	var div=document.getElementById("planning"); 
 	img.src=url;
-	document.getElementById("planning").innerHTML=img.src; 
+	if(img.width > 500)
+	{
+		img.width=500; 
+	}
+	if(img.height > 500)
+	{
+		img.height=500;
+	}
+	//document.getElementById("planning").innerHTML=img.src; 
 	div.appendChild(img);
 	return false; 
 }
