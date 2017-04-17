@@ -7,5 +7,6 @@ function addImage() {
 	var div=document.getElementById("planning"); 
 	img.src=url;
 	document.getElementById("planning").innerHTML=img.src; 
-	div.appendChild(img); 
+	div.appendChild(img);
+	return false; 
 }
