@@ -15,7 +15,6 @@ function addImage() {
 	{
 		img.height=100;
 	} 
-	//document.getElementById("planning").innerHTML=img.src; 
-	div.appendChild(img);
+	div.appendChild(img); 
 	return false; 
 }
