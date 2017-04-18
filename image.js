@@ -1,20 +1,50 @@
+
 var add = $("add");
 //var delete = $("delete");
 
 function addImage() {
 	var url=document.getElementById('pic').value;
 	var img=document.createElement("img"); 
-	var div=document.getElementById("planning");
-	img.addClassName('pictures'); 
-	img.src=url;
-	if(img.width >100)
+	var div=document.getElementById("planning"); 
+	div.className="pictures"; 
+	img.src=url; 
+	//var pics = div.querySelectorAll(".pictures");
+	var pics = div.childNodes;
+	console.log('hi there');
+	console.log("length of pics",pics.length);
+	
+	if(pics.length==1)
 	{
-		img.width=100; 
+		console.log("test");
+		div.appendChild(img);
 	}
-	if(img.height > 100)
+	else
 	{
-		img.height=100;
+		if(!search(pics,img.src))
+		{
+		
+			//div.className="pictures"; 
+			div.appendChild(img); 
+		}
+	}
+	
+	
+
+	//console.log(pics);
+	return false; 
+}
+function search(source1,source2)
+{
+	console.log("enters search",source1.length); 
+	for(var i=0;i<=source1.length-1;i++)
+	{
+		if(source1[i].src == source2)
+		{
+			console.log(source1[i].src);
+			console.log(source2);
+			console.log('hello');
+			return true;
+		} 
 	} 
-	div.appendChild(img); 
 	return false; 
 }
