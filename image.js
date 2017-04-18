@@ -4,16 +4,17 @@ var add = $("add");
 function addImage() {
 	var url=document.getElementById('pic').value;
 	var img=document.createElement("img"); 
-	var div=document.getElementById("planning"); 
+	var div=document.getElementById("planning");
+	img.addClassName('pictures'); 
 	img.src=url;
-	if(img.width > 500)
+	if(img.width >100)
 	{
-		img.width=500; 
+		img.width=100; 
 	}
-	if(img.height > 500)
+	if(img.height > 100)
 	{
-		img.height=500;
-	}
+		img.height=100;
+	} 
 	//document.getElementById("planning").innerHTML=img.src; 
 	div.appendChild(img);
 	return false; 
