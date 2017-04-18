@@ -1,5 +1,4 @@
-
-var add = $("add");
+//var add = $("add");
 //var delete = $("delete");
 
 function addImage() {
@@ -33,6 +32,25 @@ function addImage() {
 	//console.log(pics);
 	return false; 
 }
+function deleteImage()
+{
+	var url = document.getElementById('pic').value;
+	var div = document.getElementById("planning");
+	var pics = div.childNodes;
+	if(search(pics,url))
+	{
+		var images = div.querySelectorAll('[src]'); 
+		for(var img in images)
+		{
+			if(images[img].src == url)
+			{
+				div.removeChild(images[img]);
+			}
+		}		
+	}
+	return false;	
+}
+
 function search(source1,source2)
 {
 	console.log("enters search",source1.length); 
