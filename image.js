@@ -56,5 +56,7 @@ function search(source1,source2)
 function urlFunction(element)
 {
 	var url = element.src;
-	console.log(url);
+	var place = document.getElementById('pic');
+	place.value = url;		
+	//$('pic').val(url);
 }
