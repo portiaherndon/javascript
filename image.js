@@ -3,10 +3,12 @@
 
 function addImage() {
 	var url=document.getElementById('pic').value;
-	var img=document.createElement("img"); 
+	var img=document.createElement("img");
+ 
 	var div=document.getElementById("planning"); 
 	div.className="pictures"; 
 	img.src=url; 
+	img.onclick=function() {urlFunction(this)};
 	var pics = div.childNodes; 
 	if(pics.length==1)
 	{ 
@@ -50,4 +52,9 @@ function search(source1,source2)
 		} 
 	} 
 	return false; 
+}
+function urlFunction(element)
+{
+	var url = element.src;
+	console.log(url);
 }
