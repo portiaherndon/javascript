@@ -1,14 +1,10 @@
-//var add = $("add");
-//var delete = $("delete");
-
 function addImage() {
 	var url=document.getElementById('pic').value;
-	var img=document.createElement("img");
- 
+	var img=document.createElement("img"); 
 	var div=document.getElementById("planning"); 
 	div.className="pictures"; 
 	img.src=url; 
-	img.onclick=function() {urlFunction(this)};
+	img.onclick=function() {urlFunction(this)}; 
 	var pics = div.childNodes; 
 	if(pics.length==1)
 	{ 
@@ -58,5 +54,4 @@ function urlFunction(element)
 	var url = element.src;
 	var place = document.getElementById('pic');
 	place.value = url;		
-	//$('pic').val(url);
-}
+} 
