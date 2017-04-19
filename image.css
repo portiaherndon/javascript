@@ -3,6 +3,15 @@ form {
 	text-align: center;
 
 }
+.change {
+	position: float;		
+	
+	text-align: center;
+
+}
+.error {
+	color: red;
+	}
 .pictures img {
 	width: auto;
 	height: auto;
@@ -10,9 +19,10 @@ form {
 	max-height: 100px; 
 }
 .pictures:hover img {
-	-moz-transform: scale(5);
-	-webkit-transform: scale(5);
-	transform: scale(5); 
+	visibility: visible;
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	transform: scale(5,5); 
 }
 
 
