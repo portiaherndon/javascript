@@ -7,29 +7,18 @@ function addImage() {
 	var div=document.getElementById("planning"); 
 	div.className="pictures"; 
 	img.src=url; 
-	//var pics = div.querySelectorAll(".pictures");
-	var pics = div.childNodes;
-	console.log('hi there');
-	console.log("length of pics",pics.length);
-	
+	var pics = div.childNodes; 
 	if(pics.length==1)
-	{
-		console.log("test");
+	{ 
 		div.appendChild(img);
 	}
 	else
 	{
 		if(!search(pics,img.src))
 		{
-		
-			//div.className="pictures"; 
 			div.appendChild(img); 
 		}
-	}
-	
-	
-
-	//console.log(pics);
+	} 
 	return false; 
 }
 function deleteImage()
@@ -52,15 +41,11 @@ function deleteImage()
 }
 
 function search(source1,source2)
-{
-	console.log("enters search",source1.length); 
+{ 
 	for(var i=0;i<=source1.length-1;i++)
 	{
 		if(source1[i].src == source2)
 		{
-			console.log(source1[i].src);
-			console.log(source2);
-			console.log('hello');
 			return true;
 		} 
 	} 
